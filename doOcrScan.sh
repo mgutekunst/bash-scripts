@@ -6,7 +6,7 @@ mountPath="/mnt/synology"
 ocrOutputDir="processed"
 unprocessedPdfDir="unprocessed"
 
-#sudo mount -t drvfs $mountVolume $mountPath
+sudo mount -t drvfs $mountVolume $mountPath
 pushd "$mountPath/$unprocessedPdfDir"
 
 echo "Processing pdfs"
@@ -42,4 +42,4 @@ rmdir $ocrOutputDir
 popd
 
 echo "Done, now exiting..."
-#sudo umount $mountPath
+sudo umount $mountPath
